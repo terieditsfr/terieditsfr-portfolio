@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>terieditsfr</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,0.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.25), transparent 30%),
+        #050505;
+      z-index: -1;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 20px;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav h1 {
+      font-size: 2rem;
+    }
+
+    nav div {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 120px 20px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero small {
+      color: #aaa;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      margin-top: 20px;
+      line-height: 1.1;
+    }
+
+    .gradient {
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 700px;
+      margin: 30px auto;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: white;
+      color: black;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 30px;
+      padding: 30px;
+    }
+
+    .portfolio-card {
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(to bottom right,
+        rgba(168,85,247,0.2),
+        rgba(59,130,246,0.2));
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    .contact-box {
+      text-align: center;
+      background:
+        linear-gradient(to bottom right,
+        rgba(168,85,247,0.12),
+        rgba(59,130,246,0.12));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 40px;
+      padding: 60px 20px;
+    }
+
+    .email {
+      display: inline-block;
+      margin: 20px 0 40px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <header>
+    <nav>
+      <h1>terieditsfr</h1>
+
+      <div>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <small>Creative Visual Designer</small>
+
+    <h2>
+      Graphic Design,
+      <span class="gradient">Video Editing,</span>
+      and Creative Content.
+    </h2>
+
+    <p>
+      Building eye-catching visuals, modern branding,
+      social media content, and edits that stand out online.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#portfolio">View Portfolio</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>About Me</h3>
+
+    <div class="card">
+      <p>
+        I’m terieditsfr — a creative designer focused on graphic design,
+        branding, social media visuals, and video edits.
+      </p>
+
+      <br>
+
+      <p>
+        My goal is to create modern content that grabs attention and gives
+        brands a clean and professional look online.
+      </p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h3>Portfolio</h3>
+
+    <div class="grid">
+      <div class="portfolio-card">Logo Designs</div>
+      <div class="portfolio-card">Social Media Graphics</div>
+      <div class="portfolio-card">Video Editing</div>
+      <div class="portfolio-card">Branding Projects</div>
+      <div class="portfolio-card">YouTube Thumbnails</div>
+      <div class="portfolio-card">Creative Motion Content</div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h3>Services</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Graphic Design</h4>
+        <br>
+        <p>Modern designs for brands, creators, and businesses.</p>
+      </div>
+
+      <div class="card">
+        <h4>Video Editing</h4>
+        <br>
+        <p>Clean edits for TikTok, Instagram, YouTube, and more.</p>
+      </div>
+
+      <div class="card">
+        <h4>Brand Identity</h4>
+        <br>
+        <p>Visual branding that gives your content a professional look.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h3>Ready to build something creative?</h3>
+
+      <p>
+        Reach out through social media or email and let’s create visuals that stand out.
+      </p>
+
+      <a class="email" href="mailto:terieditsfr@gmail.com">
+        terieditsfr@gmail.com
+      </a>
+
+      <div class="buttons">
+        <a class="btn primary" href="https://instagram.com/terieditsfr">
+          Instagram
+        </a>
+
+        <a class="btn secondary" href="https://tiktok.com/@terieditsfr">
+          TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 terieditsfr. All rights reserved.
+  </footer>
+</body>
+</html>
